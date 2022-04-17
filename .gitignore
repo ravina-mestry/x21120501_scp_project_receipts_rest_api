@@ -1,5 +1,7 @@
-# Django
+# Python
 __pycache__
+
+# Django
 db.sqlite3
 
 # Elastic Beanstalk Files
