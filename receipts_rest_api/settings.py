@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'receiptweb.apps.ReceiptwebConfig',
     'rest_framework',
     'rest_framework.authtoken',
+    'django_celery_results',
 ]
 
 MIDDLEWARE = [
@@ -143,10 +144,16 @@ REST_FRAMEWORK = {
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = ''
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = 
 EMAIL_PORT = 
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 
 RECEIPT_API_URL = ''
 RECEIPT_API_TOKEN = ''
+
+# Cloud9
+#CELERY_BROKER_URL = ''
+# Elastic Beanstalk
+CELERY_BROKER_URL = ''
+CELERY_RESULT_BACKEND = ''
