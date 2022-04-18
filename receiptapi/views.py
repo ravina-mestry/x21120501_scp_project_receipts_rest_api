@@ -18,5 +18,5 @@ def email(request):
     message = 'Thank you for sending receipt'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = ['sach.mestry@gmail.com',]
-    # send_mail(subject, message, email_from, recipient_list)
+    send_mail(subject, message, email_from, recipient_list)
     return HttpResponse('Success!')

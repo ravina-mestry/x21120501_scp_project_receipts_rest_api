@@ -2,6 +2,8 @@ branch-defaults:
   default:
     environment: x21120501-scp-project-receiptapi-env
     group_suffix: null
+  master:
+    environment: x21120501-scp-project-receiptapi-env
 global:
   application_name: x21120501_scp_project_receipts_rest_api_app
   branch: null
