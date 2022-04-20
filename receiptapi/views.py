@@ -16,12 +16,12 @@ class ReceiptViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         print('create' + serializer.validated_data['user_email'])
-        sendmyemail.delay('CREATE', serializer.validated_data['user_email'])
+        sendmyemail.delay('ADD', serializer.validated_data['name'], serializer.validated_data['date_receipt'], serializer.validated_data['merchant_name'], serializer.validated_data['amount_total'], serializer.validated_data['user_email'])
         serializer.save()
     
     def perform_update(self, serializer):
         print('update' + serializer.validated_data['user_email'])
-        sendmyemail.delay('UPDATE', serializer.validated_data['user_email'])
+        sendmyemail.delay('UPDATE', serializer.validated_data['name'], serializer.validated_data['date_receipt'], serializer.validated_data['merchant_name'], serializer.validated_data['amount_total'], serializer.validated_data['user_email'])
         serializer.save()
 
 def email(request):
